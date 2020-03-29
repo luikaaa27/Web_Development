@@ -65,5 +65,5 @@ def categoryProducts(request,pk):
         return JsonResponse({'error': str(e)}, safe=False)
 
     products = category.product_set.all()
-    json_products = [p.to_json() for p in products]
+    json_products = [product.to_json() for product in products]
     return JsonResponse(json_products, safe=False)
