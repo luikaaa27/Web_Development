@@ -1,0 +1,7 @@
+<h1>Companies</h1>
+<div  *ngFor="let company of companies">
+  <a>{{ company.name }}</a><br>
+  {{company.description}}<br>
+  {{company.address}}<br>
+  <button routerLink="/company/:{{company.id}}/vacancies">Vacancies</button>
+</div>
